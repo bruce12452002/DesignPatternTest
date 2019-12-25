@@ -3,24 +3,18 @@ package composite;
 import java.util.List;
 
 public class File implements IFolder {
-    private String fileName;
+    private String name;
 
-    public File(String fileName) {
-        this.fileName = fileName;
-    }
-
-    @Override
     public void display() {
-        System.out.println("檔案名稱：" + fileName);
+        System.out.println("檔名：" + name);
+    }
+
+    public File(String name) {
+        this.name = name;
     }
 
     @Override
-    public boolean addNode() {
-        return false;
-    }
-
-    @Override
-    public boolean delNode() {
+    public boolean addNode(IFolder node) {
         return false;
     }
 
