@@ -7,7 +7,7 @@ public abstract class ProductCar {
 
     public abstract void doTail();
 
-    public void doCar() {
+    public final void doCar() { // final 防止被覆寫亂改
         doHead();
         doBody();
         doTail();
