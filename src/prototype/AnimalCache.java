@@ -1,8 +1,8 @@
 package prototype;
 
-import designPattern.prototype.zoo.Animal;
-import designPattern.prototype.zoo.Rabbit;
-import designPattern.prototype.zoo.Tiger;
+import prototype.zoo.Animal;
+import prototype.zoo.Rabbit;
+import prototype.zoo.Tiger;
 
 import java.util.HashMap;
 import java.util.Map;
