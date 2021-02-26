@@ -8,6 +8,9 @@ public class TestSingleton {
     public static void main(String[] args) {
         var instance1a = Singleton1.getInstance();
         var instance1b = Singleton1.getInstance();
+        instance1a.setXxx("xxx");
+        System.out.println(instance1a.getXxx());
+        System.out.println(instance1b.getXxx());
 
         var instance2a = Singleton2.getInstance();
         var instance2b = Singleton2.getInstance();
