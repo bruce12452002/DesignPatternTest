@@ -6,7 +6,9 @@ import java.lang.reflect.InvocationTargetException;
 public enum Singleton6 { // enum
     INSTANCE;
 
-    public void xxx() {
+    // 取得實體後才能使用的方法
+    public Singleton6 getInstance() {
+        return INSTANCE;
     }
 
     // 單例 Enum 可防止反射的 new
