@@ -1,11 +1,11 @@
 package template_method;
 
 public abstract class ProductCar {
-    public abstract void doHead();
+    protected abstract void doHead();
 
-    public abstract void doBody();
+    protected abstract void doBody();
 
-    public abstract void doTail();
+    protected abstract void doTail();
 
     public final void doCar() { // final 防止被覆寫亂改
         doHead();
