@@ -37,11 +37,12 @@ public class TestSingleton {
 //        System.out.println(instance6a == instance6b);
 
 
-        Set<Singleton2> set = new CopyOnWriteArraySet<>();
-        CountDownLatch countDownLatch = new CountDownLatch(50);
-        for (int i = 1; i <= 50; i++) {
+        Set<Singleton1> set = new CopyOnWriteArraySet<>();
+        final int threadNum = 5000;
+        CountDownLatch countDownLatch = new CountDownLatch(threadNum);
+        for (int i = 1; i <= threadNum; i++) {
             new Thread(() -> {
-                set.add(Singleton2.getInstance());
+                set.add(Singleton1.getInstance());
                 countDownLatch.countDown();
             }).start();
         }
