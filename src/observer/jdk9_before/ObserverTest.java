@@ -1,4 +1,4 @@
-package observer;
+package observer.jdk9_before;
 
 public class ObserverTest {
     // 使用JDK的觀察者(Observer)

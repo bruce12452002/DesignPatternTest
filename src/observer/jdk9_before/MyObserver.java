@@ -1,8 +1,11 @@
-package observer;
+package observer.jdk9_before;
 
 import java.util.Observable;
 import java.util.Observer;
 
+/**
+ * JDK 的觀察者有考慮多執行緒的情況
+ */
 public class MyObserver implements Observer /*觀察者， JDK9 已廢棄*/ {
     @Override
     public void update(Observable o, Object arg) {

@@ -1,4 +1,4 @@
-package observer;
+package observer.jdk9_before;
 
 import java.util.Observable;
 
