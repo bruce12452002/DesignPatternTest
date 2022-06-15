@@ -1,6 +1,9 @@
 package singleton;
 
-public class Singleton5 { // 內部類別
+import java.io.Serializable;
+
+public class Singleton5 implements Serializable { // 內部類別
+
     private static class InnerSingleton5 {
         private static final Singleton5 INSTANCE = new Singleton5();
     }

@@ -1,22 +1,14 @@
 package adapter;
 
-public class Adapter implements PowerSocket {
-    private PowerSocket socket;
+public class Adapter implements Target {
+    private final Source source; // 寫在這是物件適配器；寫在 extends 後面是類別適配器
 
-    public Adapter() {
-    }
-
-    public Adapter(PowerSocket socket) {
-        this.socket = socket;
+    public Adapter(Source source) {
+        this.source = source;
     }
 
     @Override
-    public int showPower() {
-        if (socket.showPower() == 110) {
-            return 220;
-        } else if (socket.showPower() == 220) {
-            return 110;
-        }
-        throw new NullPointerException();
+    public int transfer() {
+        return source.output220() / 2;
     }
 }
