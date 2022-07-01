@@ -13,7 +13,7 @@ public class BuilderTest {
         display(house1);
 
         System.out.println("---------------------");
-        HouseBuilder builder2 = new RichlHouseBuilder();
+        HouseBuilder builder2 = new RichHouseBuilder();
         new HouseDirector().construct(builder2);
 
         House house2 = builder2.getHouse();

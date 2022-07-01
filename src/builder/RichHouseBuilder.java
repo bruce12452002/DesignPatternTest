@@ -1,6 +1,6 @@
 package builder;
 
-public class RichlHouseBuilder implements HouseBuilder {
+public class RichHouseBuilder implements HouseBuilder {
     @Override
     public void fixFloor() {
         house.setFloor("很貴的地板");
