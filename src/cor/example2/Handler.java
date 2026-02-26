@@ -2,18 +2,18 @@ package cor.example2;
 
 
 public abstract class Handler {
-    private Handler handler;
+    private Handler next;
 
     public void approve(Req req) {
         if (req.getLevel() == this.getLevel()) {
             this.process(req);
         } else {
-            this.handler.approve(req);
+            this.next.approve(req);
         }
     }
 
     public void setNext(Handler handler) {
-        this.handler = handler;
+        this.next = handler;
     }
 
     protected abstract int getLevel();

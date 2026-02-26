@@ -1,12 +1,11 @@
 package cor;
 
 public abstract class CarHandler {
-    protected CarHandler carHandler;
+    protected CarHandler next;
 
     public abstract void handle();
 
-    public CarHandler setNextHandler(CarHandler carHandler) {
-        this.carHandler = carHandler;
-        return carHandler;
+    public CarHandler setNext(CarHandler carHandler) {
+        return this.next = carHandler;
     }
 }

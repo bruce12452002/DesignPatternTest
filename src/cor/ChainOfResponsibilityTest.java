@@ -17,7 +17,7 @@ public class ChainOfResponsibilityTest {
         CarHandler tail = new CarTail();
 
         // 車頭 -> 車身 -> 車尾 的順序
-        head.setNextHandler(body).setNextHandler(tail);
+        head.setNext(body).setNext(tail);
         return head;
     }
 }
