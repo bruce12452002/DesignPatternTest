@@ -1,9 +1,20 @@
 package cor;
 
+/**
+ * handle 和 setNext 要宣告成 public 在其他包才訪問的到
+ * getNextHandle 主要是子類判斷的 next 統一到父類判斷，這樣只要寫一次邏輯，所以用 protected
+ * 這時 next 也只需要 private 即可
+ */
 public abstract class CarHandler {
-    protected CarHandler next;
+    private CarHandler next;
 
     public abstract void handle();
+
+    protected void getNextHandle() {
+        if (next != null) {
+            next.handle();
+        }
+    }
 
     public CarHandler setNext(CarHandler carHandler) {
         this.next = carHandler;
